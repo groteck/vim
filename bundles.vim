@@ -24,6 +24,7 @@ Plug 'git://github.com/godlygeek/tabular.git'
 Plug 'git://github.com/tpope/vim-surround.git'
 
 "Extract part of files with different syntax
+Plug 'git://github.com/vim-scripts/ingo-library.git'
 Plug 'git://github.com/vim-scripts/SyntaxRange.git'
 
 "Commenting lines
