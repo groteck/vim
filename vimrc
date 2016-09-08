@@ -19,40 +19,10 @@ set expandtab
 set wildignore+=*/bower_vendor_libs/**
 set wildignore+=*/vendor/**
 
-" Unite config
-let mapleader = ","
-noremap <NL> :Unite -start-insert file_rec/async:!<cr>
-noremap <space>/ :Unite grep:.<cr>
-let g:unite_prompt='» '
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_file_rec_max_cache_files = 0
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_rec_async_command= 'ag -p ~/.agignore --nocolor --nogroup -g ""'
-let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore ".bzr" --hidden -g ""'
-call unite#set_profile('files', 'context.smartcase', 1)
-call unite#set_profile('files', 'context.ignorecase', 1)
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom_source('file_rec,file_rec/async', 'matchers',
-            \ ['converter_relative_word', 'matcher_default',
-            \  'sorter_default', 'converter_relative_abbr'])
-call unite#custom_source('file_rec,file_rec/async', 'converters', ['sorter_rank', 'sorter_word'])
-call unite#custom#source('file_rec,file_rec/async', 'ignore_globs',
-    \ split(&wildignore, ','))
-
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-  imap <buffer> <C-v>   <Tab>vsplit<CR>
-endfunction
-
 " lightline config
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'solarized_dark',
+      \ 'colorscheme': 'solarized',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
@@ -130,3 +100,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 au BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd FileType scss set iskeyword+=-
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>

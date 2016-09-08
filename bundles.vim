@@ -19,6 +19,7 @@ Plug 'git://github.com/hail2u/vim-css3-syntax.git', { 'for': [ 'css', 'scss' ] }
 Plug 'git://github.com/JulesWang/css.vim.git', { 'for': [ 'css', 'scss' ] }
 Plug 'git://github.com/cakebaker/scss-syntax.vim.git', { 'for': [ 'css', 'scss' ] }
 Plug 'git://github.com/fatih/vim-go.git', { 'for': 'golang' }
+Plug 'git://github.com/tpope/vim-markdown.git', { 'for': 'markdown' }
 
 "Formating text
 Plug 'git://github.com/godlygeek/tabular.git'
@@ -50,9 +51,6 @@ Plug 'git://github.com/altercation/vim-colors-solarized.git'
 "Autoclose
 Plug 'git://github.com/Raimondi/delimitMate.git'
 
-"Markdown support
-Plug 'git://github.com/tpope/vim-markdown.git', { 'for': 'markdown' }
-
 "Better status line
 Plug 'git://github.com/itchyny/lightline.vim.git'
 
@@ -62,8 +60,15 @@ Plug 'git://github.com/tpope/vim-fugitive.git'
 "Undo branching
 Plug 'git://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
 
+"Ctags
+Plug 'git://github.com/xolox/vim-easytags.git', { 'do': 'sudo apt-get install exuberant-ctags' }
+Plug 'git://github.com/jutsushi/tagbar.git'
+
 "Ctags ruby
 Plug 'git://github.com/tpope/vim-bundler.git'
+
+"Rspec
+Plug 'git://github.com/thoughtbot/vim-rspec.git'
 
 "Multiple cursors
 Plug 'git://github.com/terryma/vim-multiple-cursors.git'
