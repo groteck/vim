@@ -7,5 +7,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 curl -o ~/.vim/bundles.vim  $VIM_PLUGINS_FILE &&
 curl -o ~/.vimrc $VIMRC_FILE &&
-vim -N -u ~/.vim/bundles.vim +PlugInstall +qall
-
+vim -N -u ~/.vim/bundles.vim +PlugInstall +qall &&
+mkdir ~/.config &&
+ln -s ~/.vim ~/.config/nvim &&
+ln -s ~/.vimrc ~/.config/nvim/init.vim
