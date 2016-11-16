@@ -63,7 +63,7 @@ Plug 'git://github.com/sjl/gundo.vim.git', { 'on': 'GundoToggle' }
 "Ctags
 Plug 'git://github.com/xolox/vim-misc.git'
 Plug 'git://github.com/xolox/vim-easytags.git', { 'do': 'sudo apt-get install exuberant-ctags' }
-Plug 'git://github.com/jutsushi/tagbar.git'
+Plug 'git://github.com/majutsushi/tagbar.git'
 
 "Ctags ruby
 Plug 'git://github.com/tpope/vim-bundler.git'
