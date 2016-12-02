@@ -20,6 +20,7 @@ Plug 'git://github.com/JulesWang/css.vim.git', { 'for': [ 'css', 'scss' ] }
 Plug 'git://github.com/cakebaker/scss-syntax.vim.git', { 'for': [ 'css', 'scss' ] }
 Plug 'git://github.com/fatih/vim-go.git', { 'for': 'golang' }
 Plug 'git://github.com/tpope/vim-markdown.git', { 'for': 'markdown' }
+Plug 'git://github.com/derekwyatt/vim-scala.git', { 'for': 'scala' }
 
 "Formating text
 Plug 'git://github.com/godlygeek/tabular.git'
